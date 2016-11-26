@@ -1,1 +1,3 @@
 # Terra-Carphatica
+
+npm install
