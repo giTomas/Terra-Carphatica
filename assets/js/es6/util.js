@@ -1,4 +1,4 @@
-  // utils
+   // utils
   const getType = (el) => Object.prototype.toString.call(el).slice(8, -1);
 
   const isObject = function(elem) {
@@ -101,5 +101,9 @@
  function curry(fn, ...args1) {
    return (...args2) => fn(...args1, ...args2);
  }
+
+ const curry2 = (fn, ...app) => (...args2) => fn(...args1, ...args2)
+
+ const partial = fn => (...args) => fn.bind(null, ...args);
 
  //parial
