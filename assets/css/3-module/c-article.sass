@@ -1,0 +1,161 @@
+//article
+
+.c-article
+  &__body
+    margin-left: auto
+    @media(max-width: 959px)
+      margin: 0 auto
+
+
+//media queries for __body ??
+.c-article__section
+  // golden ratio 960 * 0.618
+  max-width: 593.28px
+  max-width: 37.08rem
+  margin-left: auto
+  @media(max-width: 959px)
+    max-width: 593.28px
+    margin: 0 auto
+  @media(max-width: 593.28px)
+    padding: 0 $vertical-rhytm
+  @media(max-width: 400px)
+    padding: 0 $vertical-rhytm/2
+
+.c-article,
+.c-article__header,
+.c-article__header--frosting-glass,
+.c-article__header--frosting-glass:after
+  overflow: hidden
+
+.c-article
+  margin-bottom: 50vh
+
+.c-article__header
+  background:
+    image: url('images/background/bg-standart.jpeg')
+    attachment: fixed
+    size: cover
+    position: center
+    repeat: no-repeat
+  margin-bottom: ($vertical-rhytm * 2)
+  height: 80vh
+  display: flex
+  align-items: flex-end
+  position: relative
+
+.c-article__header--frosting-glass
+  width: 100%
+  background-color: $color-header
+  background-image: $gradient
+  z-index: 9
+  &:after
+    background:
+      image: url('images/background/bg-standart.jpeg')
+      attachment: fixed
+      size: cover
+      position: center
+      repeat: no-repeat
+    display: block
+    // z-index: -1
+    filter: blur(5px)
+    margin: -3px 0 -9px
+    content: ' '
+    // width: 100%
+    // height: 100%
+    width: calc(100% + 9px)
+    height: calc(100% + 3px)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0.3
+
+.c-article__hgroup
+  padding-top: $vertical-rhytm
+  padding-bottom: $vertical-rhytm
+
+.c-article__author
+  font-size: $font-size-large-1
+  cursor: pointer
+  transition: $transition-basic
+  &:hover
+    color: $color-text-secondary
+
+.c-article__title
+  font-size: $font-size-large-3
+  font-weight: bold
+
+//2.varianta
+.c-article__title,
+.c-article__author
+  position: relative
+  z-index: 99
+
+.c-article__section--multimedia
+  max-width: 960px
+  margin: 0 auto
+  padding-bottom: $vertical-rhytm/2
+  @media(max-width: 959px)
+    max-width: 593.28px
+    margin: 0 auto
+
+
+.c-article__figure-float
+  cursor: zoom-in
+  // max-width: calc(593.28px - #{$vertical-rhytm/2})
+  width: calc(593.28px - #{$vertical-rhytm/2})
+  //margin-left: 366.62px
+  //margin-left: 38.19%
+  margin-left: -22.91375rem
+  margin-right: $margin-element
+  margin-bottom: calc(#{$vertical-rhytm} - 7.2px)
+  margin-bottom: 1.125rem
+  float: left
+  // 960(60rem) + $vertical-rhytm(3.4875rem)
+  @media(max-width: 63.4875rem)
+    float: none
+    width: 100%
+    margin-left: 0
+    margin-right: 0
+
+.c-article__figure-full
+  cursor: zoom-in
+  // max-width: calc(593.28px - #{$vertical-rhytm/2})
+  // width: calc(593.28px - #{$vertical-rhytm/2})
+  //margin-left: 366.62px
+  // margin-left: 38.19%
+  margin-left: -22.91375rem
+  margin-bottom: $vertical-rhytm
+  @media(max-width: 63.4875rem)
+    margin-left: 0
+    width: 100%
+
+.c-article__figure-oversize
+  background:
+    image: url('images/article/art-9-normal.jpeg')
+    attachment: fixed
+    size: cover
+    repeat: no-repeat
+    position: center
+  height: 80vh
+  margin-left: calc(-22.91375rem - 50vw + 50%)
+  margin-right: calc(-26.5vw + 26.5%)
+  margin-bottom: $vertical-rhytm
+  @media(max-width: 60rem)
+      margin-left: calc(-50vw + 50%)
+      margin-right: calc(-50vw + 50%)
+
+.c-article__caption
+  padding-top: $vertical-rhytm / 6
+  color: $color-text-light
+  font-size: $font-size-mini
+  letter-spacing: 0.006em
+  font-family: 'Oswald', sans-serif
+  position: absolute
+  // max-width: 366.624px
+  // max-width: 38.19
+  max-width: 22.91375rem
+  @media(max-width: 63.4875rem)
+    position: relative
+    max-width: 100%

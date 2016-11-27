@@ -1,0 +1,23 @@
+.c-text,
+.c-text--continue,
+.c-text--first
+  font-size: $font-size-small
+  margin-bottom: $vertical-rhytm
+  // page-break-inside: avoid
+  // break-inside: avoid
+
+// .c-text:first-child
+  &:first-letter
+    // color: $jadeit
+    color: black
+    font-weight: bold
+
+.c-text--first::first-line
+  font-weight: bold
+  // text-transform: uppercase
+
+
+.c-subtitle
+  font-size: $font-size-base
+  margin-bottom: $vertical-rhytm / 2
+  padding-top: $vertical-rhytm / 2

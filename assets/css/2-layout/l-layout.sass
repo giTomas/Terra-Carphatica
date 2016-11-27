@@ -1,0 +1,81 @@
+//LAYOUT*
+//*******
+
+//Flex*
+//*****
+.l
+  &-flex
+    display: flex
+
+  &-f-v-center
+    align-items: center
+
+  &-f-opposite
+    justify-content: space-between
+
+  &-flex-row  
+    display: flex
+    @media(max-width: 959px)
+      flex-wrap: wrap
+
+  &-flex-row-e
+    // display: flex
+    width: 593.28px
+    margin-left: auto
+    @media(max-width: 959px)
+      flex-wrap: wrap
+
+  &-g-2-2
+    max-width: 593.376px
+    max-width: 61.81%
+    max-width: 37.086rem
+
+.l-1-2
+  width: 50%
+  @media(max-width: 959px)
+    width: 100%
+
+.l-1-1
+  width: 100%
+
+.l-l-padding
+  padding-left: $vertical-rhytm
+  @media(max-width: 959px)
+    padding-left: 0
+
+//.l-g-1-2
+  // width: 61.8%
+  width: 593.28px
+  float: left
+  @media(max-width: 959px)
+    width: 100%
+
+//.l-g-2-2
+  width: 38.19%
+  max-width: 593.28px
+  // float: right
+  @media(max-width: 959px)
+    width: 100%
+
+.l-container
+  max-width: calc(960px + #{$padding-container} * 2)
+  // max-width: calc(60rem + #{$padding-container})
+  margin: 0 auto
+  padding: 0 $padding-container
+  // @media(max-width: 400px)
+    margin: 0 $vertical-rhytm/2
+
+.l-g-2-2-e
+  // width: 38.19%
+  max-width: 593.28px
+  // max-width: 100%
+  // float: right
+  @media(max-width: 959px)
+    width: 100%
+
+.l-g-1-2-e
+  // width: 61.8%
+  // margin-bottom: $vertical-rhytm / 5
+  width: calc(593.28px - #{$vertical-rhytm/2})
+  @media(max-width: 959px)
+    width: 100%

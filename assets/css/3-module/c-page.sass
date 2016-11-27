@@ -1,0 +1,40 @@
+.c-page
+  &__header
+    font-family: 'Oswald', sans-serif
+    // height: 5vh
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+    background-color: $color-header
+    background-image: $gradient
+    z-index: 99
+    box-shadow: 0 0 5px darken($color-header, 30%)
+
+    &-background
+      height: calc(#{$font-size-base} * #{$base-line-height})
+      background-color: $color-header
+
+  &__title
+    font-size: $font-size-base
+    font-variant: small-caps
+    letter-spacing: 0.04em
+
+  &__nav
+
+  &__link
+    padding-left: ($padding-elements / 2)
+    // letter-spacing: 0.02em
+    transition: $transition-basic
+    &:hover
+      color: $color-text-secondary
+
+  &-is-loading
+    background-color: $color-background
+    // display: none
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 99999

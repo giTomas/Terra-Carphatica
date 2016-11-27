@@ -1,0 +1,40 @@
+.c-profile
+  // visibility: hidden
+  width: 700px
+  max-width: 100%
+  max-height: 100%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: white
+  overflow-y: auto
+  display: flex
+  flex-wrap: wrap
+  padding: $vertical-rhytm
+  box-shadow: 0 0 6px lighten(black, 10%)
+  visibility: hidden
+  position: absolute
+
+.c-profile__name,
+  font-size: $font-size-large-1
+  font-weight: bold
+  margin-bottom: $vertical-rhytm
+  text-align: center
+  line-height: 1
+
+.c-profile__figure
+  margin-bottom: $vertical-rhytm / 2
+
+.l-g-col-1-2
+  width: 38.19%
+
+.l-g-col-2-2
+  width: 61.8%
+  padding-left: $vertical-rhytm
+  @media(max-width: 500px)
+    padding-left: 0
+
+.l-g-col-1-2,
+.l-g-col-2-2
+  @media(max-width: 500px)
+    width: 100%
