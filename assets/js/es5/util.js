@@ -1,5 +1,7 @@
 'use strict';
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 // utils
 var getType = function getType(el) {
   return Object.prototype.toString.call(el).slice(8, -1);
@@ -194,7 +196,7 @@ var compose = function compose() {
   }
 
   return function (value) {
-    return funcs.reduce(function (v, fn) {
+    return funcs.reduceRight(function (v, fn) {
       return fn(v);
     }, value);
   };
@@ -225,5 +227,25 @@ function curry(fn) {
     return fn.apply(undefined, args1.concat(args2));
   };
 }
+
+var curry2 = function curry2(fn) {
+  return function () {
+    for (var _len10 = arguments.length, args2 = Array(_len10), _key10 = 0; _key10 < _len10; _key10++) {
+      args2[_key10] = arguments[_key10];
+    }
+
+    return fn.apply(undefined, _toConsumableArray(args1).concat(args2));
+  };
+};
+
+var partial = function partial(fn) {
+  return function () {
+    for (var _len11 = arguments.length, args = Array(_len11), _key11 = 0; _key11 < _len11; _key11++) {
+      args[_key11] = arguments[_key11];
+    }
+
+    return fn.bind.apply(fn, [null].concat(args));
+  };
+};
 
 //parial

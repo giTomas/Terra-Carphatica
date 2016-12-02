@@ -35,12 +35,13 @@ gulp.task('browser-sync', () =>
 
 gulp.task('sass', () =>
   gulp.src('assets/css/main.scss')
-    .pipe(cache('sassing'))
+
     .pipe(print())
     .pipe(sass({
       includePaths: ['css'],
       onError: browserSync.notify
     }))
+    .pipe(cache('sassing'))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 9',], { cascade: true }))
     //.pipe(gulp.dest('_site/assets/css'))
     .pipe(browserSync.reload({stream:true}))
@@ -49,7 +50,7 @@ gulp.task('sass', () =>
 
 gulp.task('pug', () =>
   gulp.src('_pugfiles/*.pug')
-    .pipe(cache('pugging'))
+    .pipe(cache('puging'))
     .pipe(print())
     .pipe(gulpPug({
       pug: pug,
@@ -58,13 +59,13 @@ gulp.task('pug', () =>
     .pipe(gulp.dest('_includes'))
 );
 
-gulp.task('js', () =>
+/*gulp.task('js', () =>
   gulp.src('assets/js/es6/*.js')
     .pipe(cache('jsing'))
     .pipe(print())
     .pipe(babel({presets:['es2015']}))
     .pipe(gulp.dest('assets/js/es5'))
-);
+);*/
 
 gulp.task('bundle', () =>
   gulp.src('assets/es6/entry.js')
@@ -78,18 +79,18 @@ gulp.task('watch', () => {
   gulp.watch('assets/css/**', ['sass']);
   gulp.watch(
     [
-      'assets/css/**',
-      'index.html',
-      'assets/js/es5/**',
-      'assets/js/bundle',
+      'assets/css/*.css',
+      '*.html',
+      // 'assets/js/es5/**',
+      'assets/js/bundle/*.js',
       // 'assets/js/json/**',
       '_layouts/*.html',
-      '_includes/*'
+      '_includes/*.html'
     ],
     ['jekyll-rebuild']);
   gulp.watch('_pugfiles/*.pug', ['pug']);
-  gulp.watch('assets/js/es6/*.js', ['js']);
-  gulp.watch('assets/js/es6/app.js', ['bundle']);
+  // gulp.watch('assets/js/es6/*.js', ['js']);
+  gulp.watch('assets/js/es6/toBundle/*.js', ['bundle']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);

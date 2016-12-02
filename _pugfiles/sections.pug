@@ -1,0 +1,14 @@
+mixin section(section, title)
+  li.c-setion
+    a(href=section + '/')
+      figure.c-section__figure
+        img.c-section__image(src='assets/images/sections/' + section + '.jpg', alt=section)
+        figcaption.c-setion__figcaption
+          h3=title
+
+h2.c-setions__title Sekcie
+ul.c-sections
+  +section('priroda', 'Príroda')
+  +section('kultura', 'Kultúra')
+  +section('historia', 'História')
+  +section('ochrana-krajiny', 'Ochrana krajiny')

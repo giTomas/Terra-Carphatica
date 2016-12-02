@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const config = {
 
   entry: {
-    app: './assets/js/es6/index.js',
+    app: './assets/js/es6/toBundle/index.js',
   },
   output: {
     filename: 'bundle.js'
@@ -31,7 +31,7 @@ const config = {
       }]
     },
     //uglify
-    /*plugins: [
+    plugins: [
       new webpack.optimize.UglifyJsPlugin({
         mangle: false,
         compress: {
@@ -41,7 +41,7 @@ const config = {
           comments: false,
         },
       }),
-    ]*/
+    ]
 }
 
 module.exports = config;
