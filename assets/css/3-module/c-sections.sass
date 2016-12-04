@@ -1,2 +1,61 @@
 .c-sections
-  display: flex 
+  // display: flex
+  margin-left: -$vertical-rhytm
+  flex-wrap: wrap
+  justify-content: flex-end
+
+.c-section
+  box-shadow: 0 2px 2px $brown-dark
+  margin-left: $margin-element
+  margin-bottom: $margin-element
+
+.c-section__figure
+  width: 300px
+  height: 150px
+  overflow: hidden
+  position: relative
+  // background-color: $brown-dark
+  // background-image: $gradient
+  transition: background-color 0.5s
+  // background-color: $grass
+  &:hover
+    // background-image: $gradient
+    background-color: $brown-dark
+    .c-section__figcaption
+        color: $grass
+    .c-section__image
+      // transform: translate3d(0px, -50%, 0px) scale3d(1.2, 1.2, 1.2)
+      // mix-blend-mode: multiply
+      // mix-blend-mode: multiply
+
+
+.c-section__figcaption
+  position: absolute
+  font-size: $font-size-small
+  padding: $padding-elements/2
+  transition: color 0.22s
+  bottom: 0
+  // left: 0
+  right: 0
+  background-color: $color-background
+  font-weight: bold
+  letter-spacing: 0.04em
+  // background-image: $gradient
+  // color: white
+  transition: color 0.5s 0.1s
+
+
+
+.c-section__image
+  // margin-bottom: $vertical-rhytm / 4
+  min-height: 100%
+  width: 100%
+  // background-color: $brown-dark
+  mix-blend-mode: multiply
+  // mix-blend-mode: color-burn
+  position: absolute
+  top: 50%
+  left: 0
+  transform: translate3d(0px, -50%, 0px)
+  transition: transform 0.5s 0.1s, opacity 0.5s 0.1s, mix-blend-mode 0.5s 0.1s
+  transition: mix-blend-mode 1s 0.1s

@@ -1,14 +1,25 @@
 mixin section(section, title)
-  li.c-setion
+  li.c-section
     a(href=section + '/')
       figure.c-section__figure
-        img.c-section__image(src='assets/images/sections/' + section + '.jpg', alt=section)
-        figcaption.c-setion__figcaption
+        img.c-section__image(src='assets/imgs/sections/' + section + '.jpg', alt=section)
+        figcaption.c-section__figcaption
           h3=title
 
-h2.c-setions__title Sekcie
-ul.c-sections
-  +section('priroda', 'Príroda')
-  +section('kultura', 'Kultúra')
-  +section('historia', 'História')
-  +section('ochrana-krajiny', 'Ochrana krajiny')
+mixin section2(section, title, src)
+  li.c-section
+    a(href=section + '/')
+      figure.c-section__figure
+        img.c-section__image(src='assets/img/' + src, alt=section)
+        figcaption.c-section__figcaption
+          h3=title
+
+section.c-page__section
+  //- .c-page__subtitlecontainer
+    h2.c-page__subtitle Sekcie
+  h2.c-page__subtitle Čomu sa venujeme...
+  ul.l-flex.c-sections
+    +section2('priroda', 'Príroda', 'thumb-akt-1.jpeg')
+    +section2('kultura', 'Kultúra', 'thumb-akt-2.jpeg')
+    +section2('historia', 'História', 'thumb-akt-3.jpeg')
+    +section2('ochrana-krajiny', 'Ochrana krajiny', 'thumb-akt-4.jpeg')

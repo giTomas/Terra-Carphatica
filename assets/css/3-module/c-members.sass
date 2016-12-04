@@ -1,0 +1,91 @@
+.c-members
+  flex-wrap: wrap
+  justify-content: flex-end
+
+.c-member
+  display: flex
+  cursor: pointer
+  flex-direction: column
+  margin-bottom: $vertical-rhytm
+  margin-left: $margin-element * 2
+  &:hover
+    .c-member__image
+      transform: scale3d(1.25, 1.25, 1)
+    .c-member__name
+      color: $grass
+    .c-member__image-2,
+    .c-member__image-3
+      transform: translate3d(0, -50%, 0)
+
+.c-member__figure,
+  width: 150px
+  overflow: hidden
+  position: relative
+  z-index: 99
+  border-radius: 50%
+  margin-bottom: $vertical-rhytm
+
+.c-member__image,
+.c-member__image-css
+  transform: scale3d(1, 1, 1)
+
+
+.c-member__figure-css,
+.c-member__figure-2,
+.c-member__figure-3
+  margin-bottom: $vertical-rhytm
+  // border-radius: 50%
+
+.c-member__image
+  transition: all 0.25s ease-out 0.1s
+
+.c-member__image,
+  border-radius: 75px
+
+.c-member__image-2,
+.c-member__image-3
+  position: absolute
+  top: 50%
+  left: 0
+  min-height: 100%
+  width: 100%
+  // opacity: 0.7
+  transition: transform 0.5s, opacity 0.5s
+  transform: translate3d(0, -50%, 0) scale3d(1.2, 1.2, 1)
+
+.c-member__figcaption,
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
+.c-member__figcaption-bottom
+  justify-content: flex-end
+
+.c-member__name
+  font-size: $font-size-small
+  text-align: center
+  // padding-left: $vertical-rhytm
+
+
+
+.c-member__figure-7
+  border-radius: 75px
+  width: 150px
+  height: 150px
+  overflow: hidden
+  position: relative
+  z-index: 999
+  margin-bottom: $vertical-rhytm
+
+.c-member__image-7
+  position: absolute
+  top: 50%
+  left: 0
+  min-height: 100%
+  width: 100%
+  // opacity: 0.7
+  transition: transform 0.5s 0.1s, opacity 0.5s 0.1s
+  transform: translate3d(0, -50%, 0)
+  &:hover
+    transform: translate3d(0, -50%, 0) scale3d(1.2, 1.2, 1)

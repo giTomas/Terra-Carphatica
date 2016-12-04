@@ -1,0 +1,16 @@
+mixin member(name, data)
+  li.js-member-anim.c-member(data-member=data)
+    figure.c-member__figure
+      img.c-member__image(src='assets/img/profily/' + data +'.jpg' alt=name)
+    figcaption.c-member__figcaption
+      h3.c-member__name=name
+
+
+section.c-page__section
+  //- .c-page__subtitlecontainer
+    h2.c-page__subtitle Členovia
+  h2.c-page__subtitle Kto sme...
+  ul.l-flex.c-members
+    +member('Maroš Ondrejka', 'maros-ondrejka')
+    +member('Albert Russ', 'albert-russ')
+    +member('Tomáš Kösegi', 'tomas-kosegi')

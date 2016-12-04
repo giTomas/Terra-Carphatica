@@ -3,29 +3,35 @@
     font-family: 'Oswald', sans-serif
     // height: 5vh
     position: fixed
-    width: 100% 
+    width: 100%
     top: 0
     left: 0
     background-color: $color-header
     background-image: $gradient
     z-index: 99
     box-shadow: 0 0 5px darken($color-header, 30%)
+    z-index: 999
 
     &-background
       height: calc(#{$font-size-base} * #{$base-line-height})
       background-color: $color-header
 
   &__title
+    color: $color-text-secondary
     font-size: $font-size-base
     font-variant: small-caps
     letter-spacing: 0.04em
 
   &__nav
+    // height: 100%
 
   &__link
     padding-left: ($padding-elements / 2)
     // letter-spacing: 0.02em
+    // height: 100%
+    display: block
     transition: $transition-basic
+    color: $color-text-secondary
     &:hover
       color: $color-text-secondary
 
@@ -38,3 +44,30 @@
     bottom: 0
     right: 0
     z-index: 99999
+
+  &__section
+    margin-bottom: $vertical-rhytm * 2
+
+  &__subtitle
+    font-size: $font-size-base
+    font-weight: bold
+    // font-variant: small-caps
+
+    color: $brown-dark
+    margin-right: $vertical-rhytm / 4
+    // line-height: 1
+    margin-bottom: $vertical-rhytm / 2
+
+
+  &__subtitlecontainer
+    display: flex
+    // align-items: center
+    margin-bottom: $vertical-rhytm
+
+  &__subtitlecontainer::after
+    content: '\a0'
+    position: relative
+    bottom: 33.33%
+    height: 4px
+    flex-grow: 1
+    background-image: $gradient
